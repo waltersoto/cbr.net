@@ -12,7 +12,8 @@ Supported container formats:
   implemented using additional archive libraries.
 
 The main entry point is `ComicBook.Load(path)` which loads a comic book and
-provides access to its entries (pages).
+provides access to its entries (pages). The resulting `ComicBook` instance
+exposes the container format through the `Format` property.
 
 ## License
 

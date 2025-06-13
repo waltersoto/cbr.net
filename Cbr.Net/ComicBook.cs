@@ -13,6 +13,11 @@ namespace Cbr.Net
         private readonly List<string> _entries = new List<string>();
 
         /// <summary>
+        /// Gets the format of the comic book container.
+        /// </summary>
+        public ComicBookFormat Format { get; private set; }
+
+        /// <summary>
         /// Creates a <see cref="ComicBook"/> from the specified file.
         /// </summary>
         /// <param name="path">Path to the comic book archive.</param>
@@ -34,6 +39,7 @@ namespace Cbr.Net
                     throw new NotSupportedException($"Format '{format}' is not yet supported.");
             }
 
+            book.Format = format;
             return book;
         }
 
